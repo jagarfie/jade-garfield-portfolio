@@ -7,4 +7,4 @@ Home (index.html)
 About (about.html)
 Projects (projects.html)
 Contact (contact.html)
-Published Website URL: 
+Published Website URL: https://jagarfie.github.io/jade-garfield-portfolio/
