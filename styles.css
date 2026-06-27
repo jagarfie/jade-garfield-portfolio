@@ -1,51 +1,106 @@
 /* Author: Jade Garfield */
-/* Mobile-first portfolio */
+/* Mobile-first portfolio (improved) */
 
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    line-height: 1.6;
+    background-color: #f7f7fb;
+    color: #222;
 }
 
-header,
-footer {
+/* Header */
+header {
     text-align: center;
-    padding: 1rem;
+    padding: 2rem 1rem;
+    background: #2b2d42;
+    color: white;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+/* Navigation */
+nav {
+    background: #ffffff;
+    border-bottom: 1px solid #ddd;
 }
 
 nav ul {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 nav li {
-    padding: 0.5rem;
+    padding: 0.75rem;
+    text-align: center;
 }
 
 nav a {
     text-decoration: none;
+    color: #2b2d42;
+    font-weight: bold;
 }
 
-main {
-    padding: 1rem;
+nav a:hover {
+    color: #ef476f;
 }
+
+/* Main content */
+main {
+    padding: 1.5rem;
+    max-width: 1000px;
+    margin: auto;
+}
+
+h2 {
+    margin-top: 2rem;
+    color: #2b2d42;
+}
+
+/* Gallery */
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: 1fr;
     gap: 15px;
-    margin-top: 10px;
+    margin-top: 1rem;
 }
 
 .gallery img {
     width: 100%;
-    height: 200px;
+    height: 220px;
     object-fit: cover;
-    border-radius: 8px;
+    border-radius: 10px;
+    transition: transform 0.2s ease;
 }
+
+.gallery img:hover {
+    transform: scale(1.03);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    background: #2b2d42;
+    color: white;
+}
+
+/* Tablet/Desktop */
 @media (min-width: 768px) {
+
     nav ul {
         display: flex;
         justify-content: center;
-        gap: 1rem;
+        gap: 2rem;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
